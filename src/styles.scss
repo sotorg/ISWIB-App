@@ -1,0 +1,114 @@
+/* You can add global styles to this file, and also import other style files */
+/* Globalne promenljive boja */
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #333;
+$border-color: #ccc;
+
+/* Resetovanje osnovnih stilova */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Globalni stilovi */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif;
+  color: $primary-color;
+  margin-bottom: 15px;
+}
+
+/* Stilizacija za kontejnere i opšti raspored */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  padding: 20px 0;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dugmadi */
+button {
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Flexbox stilovi za poravnanje */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Stilski za formu */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  margin-bottom: 15px;
+
+  &:focus {
+    border-color: $primary-color;
+    outline: none;
+  }
+}
+
+/* Raspored za mobilne uređaje */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+  @import '../node_modules/leaflet/dist/leaflet.css';
+
+}

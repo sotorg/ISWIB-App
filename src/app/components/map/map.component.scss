@@ -1,0 +1,16 @@
+#map {
+  width: 100%;
+  height: 500px; /* Visina mape može se prilagoditi prema potrebama */
+  border: 1px solid #ccc; /* Opcioni border oko mape */
+}
+
+.map-container {
+  position: relative;
+  border-radius: 8px; /* Zaokruženi uglovi mape */
+}
+
+.marker-icon {
+  width: 25px;
+  height: 41px;
+}
+
