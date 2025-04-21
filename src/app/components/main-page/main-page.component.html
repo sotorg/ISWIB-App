@@ -1,25 +1,87 @@
-<header class="header">
-  <div class="logo-container">
-    <a routerLink="/">
-      <img src="assets/images/iswiblogo.png" alt="ISWIB Logo" class="logo" />
-    </a>
-  </div>
-</header>
 
 <main class="main-content">
   <div class="circle-container">
-    <div class="circle" *ngFor="let item of circles">
-      <a [routerLink]="item.link">
+
+    <div class="Raspored">
+      <a routerLink="/raspored">
         <div class="circle-content">
-          <div class="circle-image" [ngStyle]="{'background-image': 'url(assets/images/' + item.image + ')'}"></div>
-          <p>{{ item.name }}</p>
+          <div class="circle-image" style="background-image: url('/assets/images/raspored.jpg');"></div>
+          <p>Calendar</p>
+        </div>
+      </a>
+    </div>   
+
+    <div class="Mapa">
+      <a routerLink="/mapa">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/mapa.jpg');"></div>
+          <p>Maps</p>
         </div>
       </a>
     </div>
+
+    <div class="Hrana">
+      <a routerLink="/hrana">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/hrana.jpg');"></div>
+          <p>Food</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="Emergencies">
+      <a routerLink="/hitno">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/hitno.jpg');"></div>
+          <p>Emergencies</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="event">
+      <a routerLink="/event">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/event.jpg');"></div>
+          <p>Events</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="igrica">
+      <a routerLink="/igrica">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/igrica.jpg');"></div>
+          <p>Game</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="radionice">
+      <a routerLink="/radionice">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/radionice.jpg');"></div>
+          <p>Workshops</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="lost">
+      <a routerLink="/lost-and-found">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/lost-and-found.jpg');"></div>
+          <p>Lost & Found</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="faq">
+      <a routerLink="/faq">
+        <div class="circle-content">
+          <div class="circle-image" style="background-image: url('assets/images/faq.jpg');"></div>
+          <p>FAQ</p>
+        </div>
+      </a>
+    </div>
+
   </div>
 </main>
-
-
-<footer class="footer">
-  <p>&copy; 2025 ISWIB. All rights reserved.</p>
-</footer>

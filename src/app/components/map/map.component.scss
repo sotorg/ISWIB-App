@@ -1,12 +1,15 @@
-#map {
+.map-container {
   width: 100%;
-  height: 500px; /* Visina mape može se prilagoditi prema potrebama */
-  border: 1px solid #ccc; /* Opcioni border oko mape */
+  height: 100vh; // Dodaj ovu liniju ako nije postojala
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.map-container {
-  position: relative;
-  border-radius: 8px; /* Zaokruženi uglovi mape */
+#map {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
 }
 
 .marker-icon {

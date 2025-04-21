@@ -14,23 +14,41 @@ export class MapComponent implements AfterViewInit, OnDestroy {
 
   async ngAfterViewInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
-      // Dinamičko učitavanje Leaflet biblioteke
       const L = await import('leaflet');
-      
-      // Inicijalizacija mape s nasumičnom tačkom u Beogradu
+  
       this.map = L.map('map').setView([44.8125, 20.4612], 13);
       
-      // Dodavanje OpenStreetMap tile layer-a
+      const customIcon = L.icon({
+        iconUrl: 'assets/images/ikonica (1).png', // na primer: 'images/hostel-icon.png'
+        iconSize: [32, 32], // širina i visina ikonice
+        iconAnchor: [16, 32], // tačka sidrenja ikonice (gde pokazuje)
+        popupAnchor: [0, -32] // pozicija popup-a u odnosu na ikonicu
+    });
+
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(this.map);
-      
-      // Dodavanje markera na nasumičnoj tački
-      L.marker([44.8125, 20.4612]).addTo(this.map)
-        .bindPopup('Nasumična tačka u Beogradu 📍')
-        .openPopup();
+  
+      L.marker([44.8227, 20.4585], { icon: customIcon }).addTo(this.map)
+    .bindPopup(`
+        <b>Petar Drapšin Hostel</b><br/>
+        A place where all participants of ISWiB live for 8 days.
+    `)
+    .openPopup();
+  
+    L.marker([44.8223, 20.4509], { icon: customIcon }).addTo(this.map)
+    .bindPopup(`
+        <b>Belgrade Fortress</b><br/>
+        A historic core of the city with spectacular views of the confluence of the Sava and Danube rivers.
+    `)
+    .openPopup();
+      // Ovo je bitno da se mapa lepo "sredi" vizuelno
+      setTimeout(() => {
+        this.map.invalidateSize();
+      }, 300);
     }
   }
+  
 
   ngOnDestroy(): void {
     if (this.map) {
