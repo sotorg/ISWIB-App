@@ -1,7 +1,25 @@
-<div class="main-page">
-    <h1>Dobrodošli na početnu stranicu</h1>
-    <p>Ovo je glavna stranica tvoje aplikacije.</p>
-  
-    <a routerLink="/mapa">Idi na Mapu</a>
+<header class="header">
+  <div class="logo-container">
+    <a routerLink="/">
+      <img src="assets/images/iswiblogo.png" alt="ISWIB Logo" class="logo" />
+    </a>
   </div>
-  
+</header>
+
+<main class="main-content">
+  <div class="circle-container">
+    <div class="circle" *ngFor="let item of circles">
+      <a [routerLink]="item.link">
+        <div class="circle-content">
+          <div class="circle-image" [ngStyle]="{'background-image': 'url(assets/images/' + item.image + ')'}"></div>
+          <p>{{ item.name }}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+
+<footer class="footer">
+  <p>&copy; 2025 ISWIB. All rights reserved.</p>
+</footer>

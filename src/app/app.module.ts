@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppComponent } from './app.component';
+// app.component.ts
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { MainPageComponent } from './components/main-page/main-page.component';
 import { MapComponent } from './components/map/map.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    MapComponent // OVO JE KLJUČNO!
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+@Component({
+  selector: 'app-root',
+  standalone: true,  // Označava ovu komponentu kao standalone
+  imports: [RouterModule, MainPageComponent, MapComponent],  // Uključuje komponente koje koristimo
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppModule { }
+export class AppComponent {
+  title = 'Moja aplikacija';
+}
