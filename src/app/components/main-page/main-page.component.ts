@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class MainPageComponent {
   circles = [
-    { name: 'Raspored', image: 'raspored.jpg', link: '/raspored' },
+    { name: 'Calendar', image: 'raspored.jpg', link: '/raspored' },
     { name: 'Mape', image: 'mapa.jpg', link: '/mapa' },
     { name: 'Hrana', image: 'hrana.jpg', link: '/hrana' },
     { name: 'Hitno', image: 'hitno.jpg', link: '/hitno' },
