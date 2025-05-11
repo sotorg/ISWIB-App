@@ -19,10 +19,10 @@ export class MapComponent implements AfterViewInit, OnDestroy {
       this.map = L.map('map').setView([44.8125, 20.4612], 13);
       
       const customIcon = L.icon({
-        iconUrl: 'assets/images/ikonica (1).png', // na primer: 'images/hostel-icon.png'
-        iconSize: [32, 32], // širina i visina ikonice
-        iconAnchor: [16, 32], // tačka sidrenja ikonice (gde pokazuje)
-        popupAnchor: [0, -32] // pozicija popup-a u odnosu na ikonicu
+        iconUrl: 'assets/images/ikonica (3).png', // na primer: 'images/hostel-icon.png'
+        iconSize: [80, 80], // širina i visina ikonice
+        iconAnchor: [40, 80], // tačka sidrenja ikonice (gde pokazuje)
+        popupAnchor: [0, -90] // pozicija popup-a u odnosu na ikonicu
     });
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {

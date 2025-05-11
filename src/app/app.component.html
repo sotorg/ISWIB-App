@@ -335,12 +335,19 @@
 
 <!-- app.component.html -->
 <header class="header">
+  <div class="back-button-container">
+    <a [routerLink]="''" class="back-button">
+      <img src="/assets/images/back-icon.png" alt="Back" />
+    </a>
+  </div>
+
   <div class="logo-container">
     <a routerLink="/">
-      <img src="assets/images/iswiblogo.png" alt="ISWIB Logo" class="logo" />
+      <img src="assets/images/iswiblogo1.png" alt="ISWIB Logo" class="logo" />
     </a>
   </div>
 </header>
+
 
 <main class="main-content">
   <router-outlet></router-outlet>

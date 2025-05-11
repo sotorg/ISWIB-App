@@ -1,17 +1,28 @@
 .header {
-  background-color: #5566ca;
-  padding: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo i nazad dugme na suprotnim krajevima */
+  padding: 1rem;
+  width: 100%;
+}
+
+.back-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.back-button img {
+  width: 30px;
+  height: 30px;
 }
 
 .logo-container {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  max-width: 300px;
-  width: 100%;
-  height: auto;
+  width: 100px; /* prilagodi ako treba */
 }
 
 .main-content {

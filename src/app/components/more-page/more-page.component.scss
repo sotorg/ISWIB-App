@@ -1,0 +1,5 @@
+@import '../main-page/main-page.component.scss'; // Ako koristiš isti stil
+
+.circle-container.more-grid {
+  grid-template-columns: repeat(2, 1fr); // 2 kolone
+}

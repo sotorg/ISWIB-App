@@ -1,0 +1,12 @@
+<main class="faq-page">
+    <h1>FAQ</h1>
+    <div class="faq-item" *ngFor="let faq of faqs; let i = index" (click)="toggleFaq(i)">
+      <div class="faq-question">
+        {{ faq.question }}
+      </div>
+      <div class="faq-answer" *ngIf="faq.open">
+        {{ faq.answer }}
+      </div>
+    </div>
+  </main>
+  

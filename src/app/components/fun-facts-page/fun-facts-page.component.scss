@@ -1,0 +1,36 @@
+.fun-facts-page {
+    background-color: #161139;
+    color: white;
+    padding: 2rem;
+    min-height: 100vh;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .fact-card {
+      background-color: #2a245c;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+      &:hover {
+        transform: scale(1.02);
+      }
+  
+      .fact-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #f0c420;
+      }
+  
+      .fact-detail {
+        margin-top: 0.3rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  
