@@ -1,0 +1,25 @@
+.lost-and-found-page {
+  background-color: #161139;
+  color: white;
+  padding: 2rem;
+  min-height: 100vh;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+
+   img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  }
+}

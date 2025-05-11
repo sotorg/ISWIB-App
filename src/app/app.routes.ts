@@ -6,6 +6,7 @@ import { FaqPageComponent } from './components/faq-page/faq-page.component';
 import { SerbianWordsPageComponent } from './components/serbian-words/serbian-words-page.component';
 import { FunFactsPageComponent } from './components/fun-facts-page/fun-facts-page.component';
 import { CurrencyConverterPageComponent } from './components/currency-converter-page/currency-converter-page.component';
+import { LostAndFoundPageComponent } from './components/lost-and-found/lost-and-found-page.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -15,4 +16,5 @@ export const routes: Routes = [
   { path: 'serbian-words', component: SerbianWordsPageComponent },
   { path: 'fun-facts', component: FunFactsPageComponent },
   { path: 'converter', component: CurrencyConverterPageComponent },
+  { path: 'lost-and-found', component: LostAndFoundPageComponent },
 ];
