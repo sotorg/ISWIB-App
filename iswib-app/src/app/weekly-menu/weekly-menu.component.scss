@@ -1,0 +1,73 @@
+:host {
+  color: white;
+  display: block;
+  padding: 16px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.toggle-group button {
+  padding: 8px;
+  border: 1px solid #888;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.toggle-group button.active {
+  background: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}
+
+.days-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+days-nav button {
+  padding: 8px 12px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.days-nav button.selected {
+  background: #2196f3;
+  color: #fff;
+  border-color: #2196f3;
+}
+
+section h2 {
+  margin-top: 24px;
+  font-size: 1.5rem;
+}
+
+section ul {
+  list-style: none;
+  margin: 12px auto;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+section li {
+  padding: 8px 0;
+}
+
+@media (min-width: 768px) {
+  :host {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}

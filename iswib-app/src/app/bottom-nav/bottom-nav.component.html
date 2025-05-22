@@ -1,0 +1,7 @@
+<nav class="bottom-nav">
+    <ul>
+        <li *ngFor="let item of navItems" (click)="navigate(item.route)">
+            <span class="emoji">{{ item.icon }}</span>
+        </li>
+    </ul>
+</nav>

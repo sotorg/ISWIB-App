@@ -1,0 +1,40 @@
+<div class="toggle-group">
+  <button
+    *ngFor="let type of menuTypes"
+    (click)="selectType(type)"
+    [class.active]="activeType === type">
+    {{ type }}
+  </button>
+</div>
+
+<nav class="days-nav">
+  <button
+    *ngFor="let day of days"
+    (click)="selectDay(day)"
+    [class.selected]="activeDay === day">
+    {{ day }}
+  </button>
+</nav>
+
+<section>
+  <h2>Breakfast</h2>
+  <ul>
+    <li *ngFor="let item of menuItems[activeType][activeDay].breakfast">
+      {{ item }}
+    </li>
+  </ul>
+
+  <h2>Lunch</h2>
+  <ul>
+    <li *ngFor="let item of menuItems[activeType][activeDay].lunch">
+      {{ item }}
+    </li>
+  </ul>
+
+  <h2>Dinner</h2>
+  <ul>
+    <li *ngFor="let item of menuItems[activeType][activeDay].dinner">
+      {{ item }}
+    </li>
+  </ul>
+</section>
