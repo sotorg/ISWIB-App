@@ -8,6 +8,8 @@ import { FunFactsPageComponent } from './components/fun-facts-page/fun-facts-pag
 import { CurrencyConverterPageComponent } from './components/currency-converter-page/currency-converter-page.component';
 import { LostAndFoundPageComponent } from './components/lost-and-found/lost-and-found-page.component';
 import { EmergencyContactsComponent } from './components/emergency-page/emergency-contacts.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { EventsComponent } from './components/events/events.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -19,4 +21,6 @@ export const routes: Routes = [
   { path: 'converter', component: CurrencyConverterPageComponent },
   { path: 'lost-and-found', component: LostAndFoundPageComponent },
   { path: 'emergency-contacts', component: EmergencyContactsComponent},
+  { path: 'calendar', component: CalendarComponent},
+  { path: 'events', component: EventsComponent},
 ];
