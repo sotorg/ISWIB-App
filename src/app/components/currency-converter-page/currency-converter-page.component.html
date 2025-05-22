@@ -1,22 +1,25 @@
 <main class="converter-page">
-    <h1>Currency Converter to RSD</h1>
-  
-    <div class="converter-box">
-      <label for="amount">Amount:</label>
-      <input type="number" [(ngModel)]="amount" placeholder="Enter amount" />
-  
-      <label for="currency">Currency:</label>
-      <select [(ngModel)]="selectedCurrency">
-        <option *ngFor="let key of exchangeRates | keyvalue" [value]="key.key">
-          {{ key.key }}
-        </option>
-      </select>
-  
-      <button (click)="convertToRSD()">Convert</button>
-  
-      <div class="result" *ngIf="result !== null">
-        {{ amount }} {{ selectedCurrency }} = {{ result | number:'1.2-2' }} RSD
-      </div>
+  <button (click)="goBack()" class="back-button">← Back</button>
+
+  <h1>Currency Converter to RSD</h1>
+
+  <div class="converter-box">
+    <label for="amount">Amount:</label>
+    <input type="number" [(ngModel)]="amount" placeholder="Enter amount" />
+
+    <label for="currency">Currency:</label>
+    <select [(ngModel)]="selectedCurrency">
+      <option *ngFor="let key of exchangeRates | keyvalue" [value]="key.key">
+        {{ key.key }}
+      </option>
+    </select>
+
+    <button (click)="convertToRSD()">Convert</button>
+
+    <div class="result" *ngIf="result !== null">
+      {{ amount }} {{ selectedCurrency }} = {{ result | number:'1.2-2' }} RSD
     </div>
-  </main>
+  </div>
+</main>
+
   

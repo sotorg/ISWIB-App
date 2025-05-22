@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-currency-converter-page',
@@ -14,7 +15,8 @@ export class CurrencyConverterPageComponent {
   selectedCurrency: string = 'EUR';
   result: number | null = null;
 
-  // Fiksni kursevi (npr. srednji kurs NBS za april 2025)
+  constructor(private router: Router) {}
+
   exchangeRates: { [key: string]: number } = {
     EUR: 117.2,
     USD: 108.5,
@@ -31,5 +33,9 @@ export class CurrencyConverterPageComponent {
   convertToRSD() {
     const rate = this.exchangeRates[this.selectedCurrency];
     this.result = this.amount * rate;
+  }
+
+  goBack() {
+    this.router.navigate(['/more']);
   }
 }
