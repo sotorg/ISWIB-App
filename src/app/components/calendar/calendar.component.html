@@ -1,0 +1,32 @@
+<div class="segment-wrapper">
+    <div class="segment-buttons">
+        <button *ngFor="let day of days; let i = index" [ngClass]="{ active: type === 'day' + i }"
+            (click)="type = 'day' + i">
+            {{ getDayName(day) }}<br>
+            <b>{{ day }}</b>
+        </button>
+    </div>
+</div>
+
+<div *ngIf="type">
+    <div *ngFor="let item of data[+type.replace('day','')]; let i = index">
+        <div class="schedule-row" [class.current]="isCurrentEvent(item)">
+            <div class="time-column">
+                <h3>{{ item.timeFrom }}</h3>
+                <p>{{ item.timeTo }}</p>
+            </div>
+            <div class="event-card">
+                <div class="card-title">{{ item.eventTitle }}</div>
+
+                <div class="card-location" *ngIf="item.location">
+                    <a (click)="goToLocation(item)">📍 See location</a>
+                </div>
+
+                <!-- 👇 Dodato dugme za prebacivanje na events stranicu -->
+                <div class="card-link">
+                    <button (click)="goToEvents(+type.replace('day',''))">🔗 Open in Events</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

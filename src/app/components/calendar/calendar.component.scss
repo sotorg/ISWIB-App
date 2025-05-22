@@ -1,0 +1,67 @@
+.segment-wrapper {
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.segment-buttons {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+
+  button {
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+
+    &.active {
+      border-bottom: 3px solid #ffd700;
+      font-weight: bold;
+    }
+  }
+}
+
+.schedule-row {
+  display: flex;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #000;
+  transition: background 0.3s ease;
+
+  &.current {
+    border: 6px solid #a63810;
+    background-color: #000;
+  }
+
+  .time-column {
+    width: 80px;
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+    p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  }
+
+  .event-card {
+    flex: 1;
+    padding-left: 10px;
+    .card-title {
+      font-size: 1.2em;
+      font-weight: 500;
+    }
+    .card-location {
+      margin-top: 5px;
+      a {
+        color: #007bff;
+        cursor: pointer;
+      }
+    }
+  }
+}

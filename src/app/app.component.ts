@@ -1,13 +1,13 @@
 // app.component.ts
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { MapComponent } from './components/map/map.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { EventsComponent } from './components/events/events.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule, MainPageComponent, MapComponent],
+  imports: [RouterModule, CalendarComponent, EventsComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
