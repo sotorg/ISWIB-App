@@ -73,7 +73,12 @@
     }
   }
 }
-
+.footer {
+  background-color: #5566ca;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
 .footer-icons {
   display: flex;
   justify-content: center;
@@ -101,15 +106,15 @@
     }
 
     &.pinterest {
-      background-color: #e60023;
+      background-color: #ffffff;
     }
 
     &.deezer {
-      background-color: #ff007a;
+      background-color: #ffffff;
     }
 
     &.drive {
-      background-color: #0f9d58;
+      background-color: #ffffff;
     }
   }
 }

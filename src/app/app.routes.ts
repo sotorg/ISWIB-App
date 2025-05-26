@@ -10,6 +10,8 @@ import { LostAndFoundPageComponent } from './components/lost-and-found/lost-and-
 import { EmergencyContactsComponent } from './components/emergency-page/emergency-contacts.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { EventsComponent } from './components/events/events.component';
+import { WorkshopsComponent } from './components/workshops/workshops.component';
+import { WeeklyMenuComponent } from './components/weekly-menu/weekly-menu.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -23,4 +25,6 @@ export const routes: Routes = [
   { path: 'emergency-contacts', component: EmergencyContactsComponent},
   { path: 'calendar', component: CalendarComponent},
   { path: 'events', component: EventsComponent},
+  { path: 'workshops', component: WorkshopsComponent},
+  { path: 'menu', component: WeeklyMenuComponent},
 ];
