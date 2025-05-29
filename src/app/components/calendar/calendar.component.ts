@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; // ✅ DODATO
+import { BottomNavComponent } from '../bottom-nav/bottom-nav.component';
+
 
 interface ScheduleItem {
   timeFrom: string;
@@ -14,7 +16,7 @@ interface ScheduleItem {
 @Component({
   selector: 'app-calendar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BottomNavComponent],
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss']
 })

@@ -16,7 +16,7 @@ export class MainPageComponent {
     { name: 'Hrana', image: 'hrana.jpg', link: '/hrana' },
     { name: 'Hitno', image: 'hitno.jpg', link: '/hitno' },
     { name: 'Event', image: 'event.jpg', link: '/events' },
-    { name: 'Igrica', image: 'igrica.jpg', link: '/igrica' },
+    { name: 'Igrica', image: 'igrica.jpg', link: '/game' },
     { name: 'Radionice', image: 'radionice.png', link: '/radionice' },
     { name: 'Lost and Found', image: 'lost-and-found.jpg', link: '/lost-and-found' },
     { name: 'More', image: 'morepage.jpg', link: '/more' }

@@ -1,58 +1,46 @@
 .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 3.5rem;
-    z-index: 1000;
-    background: #ffffff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    overflow-x: auto;            /* scroll on small screens */
-    scrollbar-width: none;       /* Firefox */
-    -ms-overflow-style: none;    /* IE 10+ */
-  }
-  .bottom-nav::-webkit-scrollbar {
-    display: none;               /* WebKit */
-  }
-  .bottom-nav ul {
-    display: flex;
-    justify-content: flex-start; /* start from left on small screens */
-    margin: 0;
-    padding: 0.5rem;
-    list-style: none;
-  }
-  .bottom-nav li {
-    flex: 0 0 auto;
-    margin-right: 1rem;
-    cursor: pointer;
-  }
-  .bottom-nav .emoji {
-    font-size: 1.5rem;
-    width: 3rem;
-    height: 3rem;
-    line-height: 3rem;
-    display: inline-block;
-    border-radius: 50%;
-    text-align: center;
-    background: #f0f0f0;
-  }
-  
-  @media (min-width: 876px) {
-    .bottom-nav {
-      overflow-x: auto;
-    }
-    .bottom-nav ul {
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.5rem 1rem;
-    }
-    .bottom-nav ul {
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 0.5rem 2rem;
-    }
-    .bottom-nav li {
-      flex: 0 0 auto;
-      margin-right: 0;
-    }
-  }
-  
+  width: 100%;
+  background: #161139;
+  padding: 8px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4px; /* 👈 sitni razmak iznad footera */
+}
+
+
+.nav-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: relative;
+  padding: 0 8px;
+}
+
+.nav-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-scroll-content {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; // 👈 centriraj sadržaj
+  min-width: max-content;
+  border-bottom: 3px solid #5566ca; // ✅ linija ispod ikonica
+}
+
+.nav-scroll-content li {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: none;
+  padding: 0;
+  display: block;
+  border: none; // ✅ ukloni ivicu ako postoji
+}

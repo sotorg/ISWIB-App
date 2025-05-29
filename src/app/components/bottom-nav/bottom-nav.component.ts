@@ -9,22 +9,25 @@ import { Router } from '@angular/router';
   templateUrl: './bottom-nav.component.html',
   styleUrls: ['./bottom-nav.component.scss']
 })
+
 export class BottomNavComponent {
   // Definišite 12 emojija sa pripadajućim rutama
   navItems = [
-    { icon: '🏠', route: '/home' },
-    { icon: '🔍', route: '/search' },
-    { icon: '❤️', route: '/favorites' },
-    { icon: '🔔', route: '/notifications' },
-    { icon: '✉️', route: '/messages' },
-    { icon: '👤', route: '/profile' },
-    { icon: '⚙️', route: '/settings' },
-    { icon: '❓', route: '/help' },
-    { icon: 'ℹ️', route: '/about' },
-    { icon: '🛒', route: '/cart' },
-    { icon: '💳', route: '/payments' },
-    { icon: '🚪', route: '/logout' }
-  ];
+  { icon: 'assets/images/home.png', route: '' },                        // MainPageComponent
+  { icon: 'assets/images/raspored.png', route: '/calendar' },          // CalendarComponent
+  { icon: 'assets/images/mapa.png', route: '/maps' },                    // MapComponent
+  { icon: 'assets/images/hrana.png', route: '/menu' },                  // WeeklyMenuComponent
+  { icon: 'assets/images/hitno.png', route: '/emergency-contacts' },// EmergencyContactsComponent
+  { icon: 'assets/images/events.png', route: '/events' },              // EventsComponent
+  { icon: 'assets/images/igrica.png', route: '/game' },
+  { icon: 'assets/images/radionice.png', route: '/workshops' },         // WorkshopsComponent
+  { icon: 'assets/images/lost-and-found.png', route: '/lost-and-found' },        // LostAndFoundPageComponent                 
+  { icon: 'assets/images/morepage.png', route: '/faq' },                     // FaqPageComponent        
+  { icon: 'assets/images/serbianwords1.png', route: '/serbian-words' },// SerbianWordsPageComponent
+  { icon: 'assets/images/funfacts.png', route: '/fun-facts' },              // FunFactsPageComponent
+  { icon: 'assets/images/converter.png', route: '/converter' },         // CurrencyConverterPageComponent
+];
+
 
   constructor(private router: Router) { }
 

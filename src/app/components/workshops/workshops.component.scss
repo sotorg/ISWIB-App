@@ -1,138 +1,155 @@
-:host {
-  display: block;
-  padding: 16px;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  background-color: #f0f2f5;
-}
-
 .workshops-container {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161139;
   padding: 20px;
+  min-height: calc(100vh - 100px);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
 }
 
 h1 {
-  color: #333;
-  margin-bottom: 32px;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5566ca;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .workshop-card-new {
   display: flex;
-  background-color: #ffffff;
-  border: 3px solid black;
-  border-radius: 15px;
-  margin-bottom: 24px;
-  overflow: hidden;
+  flex-direction: column;
+  background-color: #161139;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.3s ease;
+  border: 2px solid #5566ca;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .workshop-card-left {
-  width: 220px; // Prilagodite po potrebi
-  border-right: 3px solid black;
-  padding: 10px;
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 }
 
 .picture-header {
-  text-align: center;
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 1.4em;
-  padding-block: 10px;
-  color: black;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .image-area {
   width: 100%;
-  height: 150px;
-  background-color: #f0f0f0;
+  height: 180px;
+  background-color: #222;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
   margin-bottom: 10px;
 }
 
 .workshop-image-content {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
 .info-section {
-  text-align: left;
-  margin-top: 10px; // Dodajemo malo prostora iznad informacija o osobama
+  text-align: center;
+  font-size: 0.95em;
+  color: #ddd;
 }
 
 .person-info-line {
-  font-size: 0.95em; // Malo veći font za čitljivost
-  color: #333;
-  margin-bottom: 8px;
-  word-wrap: break-word;
-  line-height: 1.4; // Povećan razmak između redova ako se ime prelama
+  margin-bottom: 5px;
 }
 
 .workshop-card-right {
-  flex-grow: 1;
-  padding: 20px;
-  background-color: #ffffff;
-  text-align: left;
-  display: flex; // Omogućava flex raspored za decu
-  flex-direction: column; // Deca se ređaju vertikalno
-}
-
-.workshop-main-content {
-  flex-grow: 1; // Ovaj deo će zauzeti sav raspoloživ prostor, gurajući meta-info na dno
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .workshop-main-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 15px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 .workshop-main-description {
   font-size: 1rem;
-  color: #333;
   line-height: 1.6;
-  margin-bottom: 15px; // Dodajemo marginu ispod opisa pre meta informacija
+  color: #ccc;
+  margin-bottom: 15px;
 }
 
 .workshop-meta-info {
   display: flex;
-  flex-wrap: wrap; // Omogućava prelazak u novi red ako nema dovoljno prostora
-  justify-content: flex-start; // Počinje sa leve strane
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
   padding-top: 10px;
-  border-top: 1px solid #e0e0e0; // Tanka linija iznad meta informacija
-  margin-top: auto; // Ovo pomaže da se gurne na dno, zajedno sa flex-grow na .workshop-main-content
-  gap: 15px; // Razmak između meta-itema (moderniji način od margin-right)
+  border-top: 1px solid #444;
+  color: #5566ca;
+  font-size: 0.9rem;
 }
 
 .meta-item {
-  font-size: 0.85em;
-  color: #555;
-  // margin-right: 15px; // Uklonjeno u korist 'gap' na roditeljskom elementu
-  // &:last-child {
-  //   margin-right: 0;
-  // }
+  white-space: nowrap;
 }
 
-@media (max-width: 767px) {
-  .workshop-card-new {
-    flex-direction: column;
+/* ✅ Responsive prilagođavanje za mobilne */
+@media (max-width: 600px) {
+  .image-area {
+    height: 120px;
   }
 
-  .workshop-card-left {
-    width: 100%;
-    border-right: none;
-    border-bottom: 3px solid black;
+  .workshop-image-content {
+    object-fit: cover;
+    font-size: 0.8rem;
+  }
+
+  .workshop-main-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .workshop-main-description {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+
+  .picture-header {
+    font-size: 1rem;
   }
 
   .workshop-meta-info {
-    justify-content: space-around; // Na manjim ekranima može biti bolje centrirano ili drugačije
+    font-size: 0.85rem;
+    gap: 10px;
+    justify-content: center;
   }
 }

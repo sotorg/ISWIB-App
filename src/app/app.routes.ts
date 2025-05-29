@@ -12,6 +12,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { EventsComponent } from './components/events/events.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { WeeklyMenuComponent } from './components/weekly-menu/weekly-menu.component';
+import { TictactoeComponent } from './components/game/tictactoe.component';
 
 export const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -27,4 +28,5 @@ export const routes: Routes = [
   { path: 'events', component: EventsComponent},
   { path: 'workshops', component: WorkshopsComponent},
   { path: 'menu', component: WeeklyMenuComponent},
+  { path: 'game', component: TictactoeComponent},
 ];

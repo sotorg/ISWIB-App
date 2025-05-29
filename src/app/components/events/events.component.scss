@@ -1,24 +1,60 @@
 .segment-wrapper {
   margin-bottom: 20px;
+  width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to left, #161139, transparent);
+    pointer-events: none;
+  }
+
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #5566ca;
+    border-radius: 4px;
+  }
+
+  scrollbar-color: #5566ca transparent;
+  scrollbar-width: thin;
 }
 
 .segment-buttons {
   display: flex;
+  flex-wrap: nowrap;
   gap: 10px;
-  white-space: nowrap;
+  min-width: max-content;
+  padding: 0 10px;
 
   button {
-    padding: 10px;
+    padding: 10px 0;
     border: none;
     background: transparent;
     color: #fff;
     font-size: 14px;
     border-bottom: 3px solid transparent;
     cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 60px;
 
     &.active {
-      border-bottom: 3px solid #ffd700;
+      border-bottom: 3px solid #5566ca;
       font-weight: bold;
     }
   }
@@ -27,58 +63,69 @@
 .event-card {
   display: flex;
   margin-bottom: 16px;
-  padding: 12px;
-  border-radius: 10px;
-  background: #111;
+  padding: 16px;
+  border-radius: 12px;
+  background: #5566ca;
   color: #fff;
+  align-items: flex-start;
+  transition: background 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
 
   .event-time {
-    width: 80px;
-    h3 {
-      margin: 0;
-      font-size: 1.2em;
-    }
-    p {
-      margin: 0;
-      font-size: 0.9em;
-    }
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #161139;
+  font-weight: bolder;
+
+  h3 {
+    margin: 0;
+    font-size: 1.3rem; // ⬅️ veće početno vreme
+    color: #161139;
   }
+
+  p {
+    margin: 0;
+    font-size: 1.1rem; // ⬅️ malo veće krajnje vreme
+    color: #161139;
+  }
+}
+
 
   .event-details {
     flex: 1;
-    padding-left: 12px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .event-title {
-      font-size: 1.3em;
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-size: 1.2em;
+      font-weight: 500;
     }
 
     .event-info {
-      font-size: 0.95em;
+      margin-top: 8px;
+      font-size: 0.9em;
 
       p {
-        margin: 2px 0;
+        margin: 4px 0;
       }
 
-      .event-location {
-        margin-top: 6px;
-
-        a {
-          color: #00afff;
-          cursor: pointer;
-          text-decoration: underline;
-        }
+      a {
+        color: #ff98e7;
+        text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
 }
-.footer {
-  background-color: #5566ca;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-}
+
 .footer-icons {
   display: flex;
   justify-content: center;
@@ -86,35 +133,23 @@
   margin-top: 30px;
 
   .circle-icon {
-    width: 56px;
-    height: 56px;
-    background-color: #333;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
     border-radius: 50%;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-
-    img {
-      width: 28px;
-      height: 28px;
-    }
 
     &:hover {
       transform: scale(1.1);
     }
 
-    &.pinterest {
-      background-color: #ffffff;
-    }
-
-    &.deezer {
-      background-color: #ffffff;
-    }
-
-    &.drive {
-      background-color: #ffffff;
+    img {
+      width: 24px;
+      height: 24px;
     }
   }
 }

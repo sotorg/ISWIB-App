@@ -1,24 +1,62 @@
 .segment-wrapper {
   margin-bottom: 20px;
+  width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to left, #161139, transparent);
+    pointer-events: none;
+  }
+
+  /* Scrollbar styling for Chrome, Edge, Safari */
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #5566ca;
+    border-radius: 4px;
+  }
+
+  /* Scrollbar styling for Firefox */
+  scrollbar-color: #5566ca transparent;
+  scrollbar-width: thin;
 }
 
 .segment-buttons {
   display: flex;
+  flex-wrap: nowrap;
   gap: 10px;
-  white-space: nowrap;
+  min-width: max-content;
+  padding: 0 10px;
 
   button {
-    padding: 10px;
+    padding: 10px 0;
     border: none;
     background: transparent;
     color: #fff;
     font-size: 14px;
     border-bottom: 3px solid transparent;
     cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 60px;
 
     &.active {
-      border-bottom: 3px solid #ffd700;
+      border-bottom: 3px solid #5566ca;
       font-weight: bold;
     }
   }
@@ -29,39 +67,106 @@
   margin-bottom: 16px;
   padding: 12px;
   border-radius: 10px;
-  background: #000;
+  background: #161139;
+  border-color: #5566ca;
   transition: background 0.3s ease;
+  color: #fff;
+  align-items: flex-start;
 
   &.current {
-    border: 6px solid #a63810;
-    background-color: #000;
+    border: 6px solid #5566ca;
+    background-color: #5566ca;
   }
 
   .time-column {
-    width: 80px;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100%;
+
+    h3, p {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  .event-time {
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #161139;
+    font-weight: bolder;
+
     h3 {
       margin: 0;
-      font-size: 1.2em;
+      font-size: 1.3rem;
+      color: #161139;
     }
+
     p {
       margin: 0;
-      font-size: 0.9em;
+      font-size: 1.1rem;
+      color: #161139;
     }
   }
 
   .event-card {
     flex: 1;
     padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .card-title {
       font-size: 1.2em;
       font-weight: 500;
     }
+
     .card-location {
       margin-top: 5px;
+
       a {
-        color: #007bff;
+        color: #5566ca;
         cursor: pointer;
+        text-decoration: underline;
       }
+    }
+
+    .card-link {
+      margin-top: 10px;
+
+      button {
+        background: transparent;
+        color: #5566ca;
+        border: 1px solid #5566ca;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 0.9em;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+        &:hover {
+          background: #5566ca;
+          color: #161139;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .segment-wrapper {
+    overflow-x: hidden;
+    padding: 0;
+
+    .segment-buttons {
+      justify-content: space-between;
+      width: 100%;
+      max-width: 100%;
     }
   }
 }
