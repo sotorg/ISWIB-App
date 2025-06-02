@@ -2,7 +2,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "your-project-name": {
+    "iswib-app": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -11,7 +11,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/your-project-name/browser",
+            "outputPath": "dist/iswib-app/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -41,18 +41,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "your-project-name:build"
+            "buildTarget": "iswib-app:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "your-project-name:build:production"
+              "buildTarget": "iswib-app:build:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/your-project-name/server",
+            "outputPath": "dist/iswib-app/server",
             "tsConfig": "tsconfig.server.json",
             "main": "src/main.server.ts"
           }

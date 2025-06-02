@@ -1,10 +1,8 @@
-// app.component.ts
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { MapComponent } from './components/map/map.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -39,5 +37,19 @@ export class AppComponent {
     ];
     const currentRoute = this.router.url.split('?')[0];
     return includedRoutes.includes(currentRoute);
+  }
+
+getBackRoute(): string {
+    const url = this.router.url;
+    const moreChildren = [
+      '/faq',
+      '/serbian-words',
+      '/fun-facts',
+      '/converter',
+    ];
+    if (moreChildren.some(route => url.startsWith(route))) {
+      return '/more';
+    }
+    return '/';
   }
 }
