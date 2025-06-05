@@ -1,26 +1,31 @@
 <div class="workshops-container">
-  <h1 class="text-3xl font-bold text-center mb-8">Radionice</h1>
+  <h1 class="text-3xl font-bold italic text-center mb-8">Workshops</h1>
+
 
   <div *ngFor="let workshop of workshops" class="workshop-card-new">
     <div class="workshop-card-left">
-      <div class="picture-header">Picture</div>
       <div class="image-area">
         <img [src]="workshop.image" alt="{{ workshop.title }}" class="workshop-image-content">
       </div>
+
+      <!-- 📄 Naslov i opis ispod slike -->
+      <div class="workshop-main-text">
+        <h2 class="workshop-main-title">{{ workshop.title }}</h2>
+        <p class="workshop-main-description">{{ workshop.description }}</p>
+        <div class="workshop-meta-info">
+          <span class="meta-item"><strong>Date:</strong> {{ workshop.date }}</span>
+          <span class="meta-item"><strong>Time:</strong> {{ workshop.time }}</span>
+          <span class="meta-item"><strong>Location:</strong> {{ workshop.location }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 👤 Predavači desno na desktopu, dole na telefonu -->
+    <div class="workshop-card-right">
       <div class="info-section">
         <div *ngFor="let person of workshop.people" class="person-info-line">
           {{ person.name }} - {{ person.position }}
         </div>
-      </div>
-    </div>
-    <div class="workshop-card-right">
-      <div class="workshop-main-content"> <h2 class="workshop-main-title">{{ workshop.title }}</h2>
-        <p class="workshop-main-description">{{ workshop.description }}</p>
-      </div>
-      <div class="workshop-meta-info">
-        <span class="meta-item"><strong>Datum:</strong> {{ workshop.date }}</span>
-        <span class="meta-item"><strong>Vreme:</strong> {{ workshop.time }}</span>
-        <span class="meta-item"><strong>Lokacija:</strong> {{ workshop.location }}</span>
       </div>
     </div>
   </div>

@@ -1,6 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
 /* Globalne promenljive boja */
-$primary-color: #007bff;
+$primary-color: #f2bb51;
 $secondary-color: #6c757d;
 $background-color: #161139;
 $text-color: #ffffff;
@@ -17,7 +16,7 @@ $border-color: #ccc;
 
 /* Globalni stilovi */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: $background-color;
   color: $text-color;
   line-height: 1.6;
@@ -35,7 +34,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: $primary-color;
   margin-bottom: 15px;
 }
@@ -47,12 +46,30 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
-section {
-  padding: 20px 0;
-  background-color: #fff;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* ↓↓↓ SMANJENI RAZMAK između header / main / footer ↓↓↓ */
+.header,
+.main-content,
+.footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* ovo osigurava da main gura footer dole */
+}
+
+/* Stil za footer */
+.footer {
+  background-color: #1f1a3d;
+  color: #aaa;
+  text-align: center;
+  font-size: 0.85rem;
 }
 
 /* Dugmadi */
@@ -109,6 +126,6 @@ textarea {
   button {
     width: 100%;
   }
-  @import '../node_modules/leaflet/dist/leaflet.css';
-
 }
+
+@import '../node_modules/leaflet/dist/leaflet.css';

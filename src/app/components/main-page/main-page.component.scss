@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 100px);  /* Prilagodite visinu u odnosu na header i footer */
+  min-height: 80vh;  /* Prilagodite visinu u odnosu na header i footer */
   flex-direction: column;
   background-color: #161139;
   padding: 20px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
 .circle-container {

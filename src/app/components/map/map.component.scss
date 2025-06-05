@@ -17,3 +17,44 @@
   height: 41px;
 }
 
+// Styling for the legend below the map
+.legend-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.legend-container h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.legend-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend-container li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.legend-container img {
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 40px; /* Size of the icon in the legend */
+  height: 40px;
+}
+
+.legend-container span {
+  font-size: 14px;
+  color: #333;
+}

@@ -8,17 +8,17 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { MapComponent } from './components/map/map.component';
 import { MorePageComponent } from './components/more-page/more-page.component';
 import { FaqPageComponent } from './components/faq-page/faq-page.component';
-import { SerbianWordsPageComponent } from './components/serbian-words.component';
+import { SerbianWordsPageComponent } from './components/serbian-words/serbian-words-page.component';
 import { FunFactsPageComponent } from './components/fun-facts-page/fun-facts-page.component';
-import { CurrencyConverterPageComponent } from './components/converter-page/converter-page.component';
-import { LostAndFoundPageComponent } from './components/lost-and-found-page/lost-and-found-page.component';
-import { EmergencyContactsComponent } from './components/emergency-contacts/emergency-contacts.component';
+import { CurrencyConverterPageComponent } from './components/currency-converter-page/currency-converter-page.component';
+import { LostAndFoundPageComponent } from './components/lost-and-found/lost-and-found-page.component';
+import { EmergencyContactsComponent } from './components/emergency-page/emergency-contacts.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { EventsComponent } from './components/events/events.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
 import { WeeklyMenuComponent } from './components/weekly-menu/weekly-menu.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
-import { TictactoeComponent } from './components/tictactoe/tictactoe.component';
+import { TictactoeComponent } from './components/game/tictactoe.component';
 
 const routes: Routes = [
   { path: '', component: MainPageComponent },
@@ -60,6 +60,6 @@ const routes: Routes = [
     BottomNavComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
