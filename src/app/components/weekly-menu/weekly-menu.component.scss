@@ -21,7 +21,7 @@
   button {
     padding: 10px 16px;
     background: transparent;
-    border: 2px solid #5566ca;
+    border: 2px solid #f2bb51;
     color: #fff;
     cursor: pointer;
     border-radius: 6px;
@@ -29,7 +29,7 @@
     transition: background-color 0.3s ease;
 
     &.active {
-      background-color: #5566ca;
+      background-color: #f2bb51;
       font-weight: bold;
     }
   }
@@ -46,7 +46,7 @@
 
   button {
     padding: 10px 14px;
-    border: 2px solid #5566ca;
+    border: 2px solid #f2bb51;
     background: transparent;
     color: #fff;
     border-radius: 6px;
@@ -55,7 +55,7 @@
     transition: background-color 0.3s ease;
 
     &.selected {
-      background-color: #5566ca;
+      background-color: #f2bb51;
       color: #161139;
       font-weight: bold;
     }
@@ -70,7 +70,7 @@ section {
 
   h2 {
     font-size: 1.8rem;
-    color: #5566ca;
+    color: #f2bb51;
     margin-top: 20px;
   }
 

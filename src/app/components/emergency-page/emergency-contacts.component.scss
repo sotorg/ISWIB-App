@@ -61,62 +61,64 @@ nav a:hover {
 .organization-team-container {
   display: flex;
   gap: 24px;
-  margin-bottom: 24px;
   flex-wrap: wrap;
   justify-content: center; /* Center the contact boxes */
-  max-width: 900px; /* Increased max-width for more space */
-  width: 100%;
+  max-width: 900px; /* Set max-width for better responsiveness */
   margin: 0 auto; /* Center the container itself */
+  padding: 0 20px; /* Padding for better spacing */
 }
 
 .contact-box {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  width: 220px; /* Increased width for larger content */
-  min-height: 140px; /* Increased height for text */
-  padding: 15px;
+  width: 220px; /* Set a fixed width to prevent overly large boxes */
+  min-height: 180px; /* Ensure the boxes have enough height */
+  padding: 20px; /* Add padding for better spacing */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: default;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   user-select: none;
   text-align: center;
+  background-color: #f5f5f5; /* Light grey background */
+  
   &:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px); /* Slightly stronger hover effect */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    background-color: #e8e8e8; /* Slight color change on hover */
   }
 }
 
 .phone-number {
-  font-size: 1.6rem; /* Slightly larger font for phone numbers */
+  font-size: 1.8rem; /* Larger font for phone numbers */
   font-weight: 700;
-  color: #d32f2f;
-  margin-bottom: 8px;
-  letter-spacing: 1.2px;
+  color: #d32f2f; /* Red color for emergency numbers */
+  margin-bottom: 10px;
+  letter-spacing: 1.5px;
   word-break: break-word;
 }
 
 .name {
-  font-size: 1.4rem; /* Larger for readability */
+  font-size: 1.5rem; /* Larger font for names */
   font-weight: 700;
   color: #333;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   word-break: break-word;
 }
 
 .position {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #555;
   font-weight: 600;
-  margin-top: 6px;
+  margin-top: 10px;
   word-break: break-word;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #555;
   font-weight: 600;
   text-align: center;
@@ -144,3 +146,29 @@ nav a:hover {
   margin-top: 20px; /* Add margin to separate from main content */
 }
 
+/* Responsive Layout for Contact Boxes */
+@media (max-width: 1200px) {
+  .contact-box {
+    width: 180px; /* Smaller boxes on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-box {
+    width: 150px; /* Even smaller boxes on small screens */
+  }
+
+  .contacts-container {
+    gap: 16px; /* Reduce gap between items */
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-box {
+    width: 100%; /* Full-width boxes on mobile */
+  }
+
+  .contacts-container {
+    padding: 0; /* Remove extra padding on mobile */
+  }
+}

@@ -23,39 +23,9 @@ export class WeeklyMenuComponent implements OnInit {
   currentDay = '';
 
   menuItems: Record<string, Record<string, MenuDay>> = {
-    Regular: {
-      '20': { breakfast: [], lunch: [], dinner: [] },
-      '21': { breakfast: [], lunch: [], dinner: [] },
-      '22': { breakfast: [], lunch: [], dinner: [] },
-      '23': { breakfast: [], lunch: [], dinner: [] },
-      '24': { breakfast: [], lunch: [], dinner: [] },
-      '25': { breakfast: [], lunch: [], dinner: [] },
-      '26': { breakfast: [], lunch: [], dinner: [] },
-      '27': { breakfast: [], lunch: [], dinner: [] },
-      '28': { breakfast: [], lunch: [], dinner: [] },
-    },
-    Vegan: {
-      '20': { breakfast: [], lunch: [], dinner: [] },
-      '21': { breakfast: [], lunch: [], dinner: [] },
-      '22': { breakfast: [], lunch: [], dinner: [] },
-      '23': { breakfast: [], lunch: [], dinner: [] },
-      '24': { breakfast: [], lunch: [], dinner: [] },
-      '25': { breakfast: [], lunch: [], dinner: [] },
-      '26': { breakfast: [], lunch: [], dinner: [] },
-      '27': { breakfast: [], lunch: [], dinner: [] },
-      '28': { breakfast: [], lunch: [], dinner: [] },
-    },
-    Halal: {
-      '20': { breakfast: [], lunch: [], dinner: [] },
-      '21': { breakfast: [], lunch: [], dinner: [] },
-      '22': { breakfast: [], lunch: [], dinner: [] },
-      '23': { breakfast: [], lunch: [], dinner: [] },
-      '24': { breakfast: [], lunch: [], dinner: [] },
-      '25': { breakfast: [], lunch: [], dinner: [] },
-      '26': { breakfast: [], lunch: [], dinner: [] },
-      '27': { breakfast: [], lunch: [], dinner: [] },
-      '28': { breakfast: [], lunch: [], dinner: [] },
-    }
+    Regular: this.generateMenu(),
+    Vegan: this.generateMenu(),
+    Halal: this.generateMenu()
   };
 
   navItems = [
@@ -78,6 +48,31 @@ export class WeeklyMenuComponent implements OnInit {
       this.activeDay = this.days[0];
     }
     this.currentDay = padded;
+  }
+
+  generateMenu(): Record<string, MenuDay> {
+    const randomFoodItems = {
+      breakfast: ['Pancakes', 'Cereal', 'Toast', 'Omelette', 'Fruit Salad'],
+      lunch: ['Sandwich', 'Grilled Chicken', 'Pasta', 'Salad', 'Sushi'],
+      dinner: ['Steak', 'Pizza', 'Burger', 'Pasta', 'Vegetable Stir-fry']
+    };
+
+    let menu: Record<string, MenuDay> = {};
+
+    this.days.forEach(day => {
+      menu[day] = {
+        breakfast: this.getRandomItems(randomFoodItems.breakfast),
+        lunch: this.getRandomItems(randomFoodItems.lunch),
+        dinner: this.getRandomItems(randomFoodItems.dinner)
+      };
+    });
+
+    return menu;
+  }
+
+  getRandomItems(items: string[], count = 3): string[] {
+    let shuffled = [...items].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
   }
 
   getDayName(day: string): string {
