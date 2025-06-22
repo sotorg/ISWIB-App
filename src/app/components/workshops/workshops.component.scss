@@ -1,0 +1,172 @@
+.workshops-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161139;
+  padding: 20px;
+  min-height: calc(100vh - 100px);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f2bb51;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.workshop-card-new {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #161139;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.3s ease;
+  border: 2px solid #5566ca;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.workshop-card-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.image-area {
+  width: 300px;
+  height: 300px;
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.workshop-image-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workshop-main-text {
+  text-align: left;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+.workshop-main-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.workshop-main-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.workshop-meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #444;
+  color: #5566ca;
+  font-size: 0.9rem;
+}
+
+.meta-item {
+  white-space: nowrap;
+}
+
+.workshop-card-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .info-section {
+    font-size: 0.95rem;
+    color: #ddd;
+  }
+
+  .person-info-line {
+    margin-bottom: 5px;
+  }
+}
+
+/* ✅ Responsive stilovi za mobilne uređaje */
+@media (max-width: 600px) {
+  .workshop-card-new {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .workshop-card-left {
+    width: 100%;
+    margin-right: 0;
+    align-items: center;
+  }
+
+  .image-area {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  .workshop-main-text {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .workshop-main-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .workshop-main-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+
+  .workshop-meta-info {
+    font-size: 0.9rem;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .meta-item {
+    text-align: center;
+  }
+
+  .workshop-card-right {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .info-section {
+    text-align: center;
+  }
+}

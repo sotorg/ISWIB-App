@@ -1,0 +1,73 @@
+<div class="toggle-group">
+  <button
+    *ngFor="let type of menuTypes"
+    (click)="selectType(type)"
+    [class.active]="activeType === type">
+    {{ type }}
+  </button>
+</div>
+
+<nav class="days-nav">
+  <button
+    *ngFor="let day of days"
+    (click)="selectDay(day)"
+    [class.selected]="activeDay === day">
+    {{ getDayName(day) }}
+  </button>
+</nav>
+
+<section>
+  <h2>Breakfast</h2>
+
+  <div class="ornamental-divider">
+  <div class="line"></div>
+  <img
+    class="ornament-image"
+    src="/assets/images/meni - border.png"
+    alt="ornamental divider"
+  />
+  <div class="line"></div>
+</div>
+
+  <ul>
+    <li *ngFor="let item of menuItems[activeType][activeDay].breakfast">
+      {{ item }}
+    </li>
+  </ul>
+
+  <h2>Lunch</h2>
+  <div class="ornamental-divider">
+  <div class="line"></div>
+  <img
+    class="ornament-image"
+    src="/assets/images/meni - border.png"
+    alt="ornamental divider"
+  />
+  <div class="line"></div>
+</div>
+  <ul>
+    <li *ngFor="let item of menuItems[activeType][activeDay].lunch">
+      {{ item }}
+    </li>
+  </ul>
+
+  <!-- Dinner section wrapped in .wave-section 
+  <div class="wave-section">
+    <div class="wave-top"></div>
+    <div class="wave-content">-->
+      <h2>Dinner</h2>
+      <div class="ornamental-divider">
+  <div class="line"></div>
+  <img
+    class="ornament-image"
+    src="/assets/images/meni - border.png"
+    alt="ornamental divider"
+  />
+  <div class="line"></div>
+</div>
+      <ul>
+        <li *ngFor="let item of menuItems[activeType][activeDay].dinner">
+          {{ item }}
+        </li>
+      </ul>
+</section>

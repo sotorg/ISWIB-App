@@ -1,0 +1,15 @@
+<div class="tictactoe-game">
+  <h1>Tic Tac Toe</h1>
+  <div class="status-message">{{ status }}</div>
+  <button (click)="newGame()" class="restart-button">New game!</button>
+
+  <div class="board">
+    <button
+      *ngFor="let square of squares; let i = index"
+      class="square"
+      (click)="makeMove(i)"
+      [disabled]="square !== null || !!winner">
+      <img *ngIf="getImageForPlayer(square)" [src]="getImageForPlayer(square)!" [alt]="square || ''">
+    </button>
+  </div>
+</div>

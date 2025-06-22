@@ -1,0 +1,24 @@
+<div class="main-container">
+
+  <header class="header">
+    <a [routerLink]="getBackRoute()" class="hide-at-index back-button">
+    <img src="/assets/images/back-icon.png" alt="Back" />
+    </a>
+
+    <div class="logo-container">
+      <a routerLink="/">
+        <img src="/assets/images/iswiblogo1.png" alt="ISWIB Logo" class="logo" />
+      </a>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <app-bottom-nav></app-bottom-nav>
+  <footer class="footer">
+    <p>&copy; 2025 ISWIB. All rights reserved. Made by IT Team, and friends ®</p>
+  </footer>
+
+</div>

@@ -1,0 +1,13 @@
+<main class="main-content">
+    <div class="circle-container more-grid">
+      <div class="circle" *ngFor="let item of moreCircles">
+        <a [routerLink]="item.link">
+          <div class="circle-content">
+            <div class="circle-image" [style.backgroundImage]="'url(/assets/images/' + item.image + ')'"></div>
+            <p>{{ item.name }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+  

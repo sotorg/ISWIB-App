@@ -1,0 +1,35 @@
+.faq-page {
+    background-color: #161139;
+    color: white;
+    padding: 2rem;
+    min-height: 100vh;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  
+    .faq-item {
+      background-color: #2a245c;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #3a3475;
+      }
+  
+      .faq-question {
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+  
+      .faq-answer {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  

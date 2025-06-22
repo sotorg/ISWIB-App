@@ -1,0 +1,46 @@
+<div class="segment-wrapper">
+  <div class="segment-buttons">
+    <button *ngFor="let day of days; let i = index" [ngClass]="{ active: type === 'day' + i }"
+            (click)="type = 'day' + i">
+      {{ getDayName(day) }}<br>
+      <b>{{ day }}</b>
+    </button>
+  </div>
+</div>
+
+<div *ngIf="type">
+  <div *ngFor="let item of data[+type.replace('day','')]">
+    <div class="event-card">
+      <div class="event-time">
+        <h3>{{ item.timeFrom }}</h3>
+        <p>{{ item.timeTo }}</p>
+      </div>
+      <div class="event-details">
+        <div class="event-title">{{ item.eventTitle }}</div>
+        <div class="event-info">
+          <p *ngIf="item.dressCode"><b>Dress Code:</b> {{ item.dressCode }}</p>
+          <p *ngIf="item.theme"><b>Theme:</b> {{ item.theme }}</p>
+          <p *ngIf="item.cardsAccepted !== undefined">
+            <b>Cards Accepted:</b> {{ item.cardsAccepted ? 'Yes' : 'No' }}
+          </p>
+          <div class="event-location" *ngIf="item.location">
+            <a (click)="goToLocation(item)">📍 {{ item.location }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer-icons">
+  <a href="https://pinterest.com/your-board" target="_blank" class="circle-icon pinterest" title="Pinterest Board">
+    <img src="assets/images/pinterest.png" alt="Pinterest" />
+  </a>
+  <a href="https://deezer.com/your-playlist" target="_blank" class="circle-icon deezer" title="Deezer Playlist">
+    <img src="assets/images/deezer.png" alt="Deezer" />
+  </a>
+  <a href="https://drive.google.com/your-folder" target="_blank" class="circle-icon drive" title="Upload to Drive">
+    <img src="assets/images/drive.png" alt="Google Drive" />
+  </a>
+</div>
+

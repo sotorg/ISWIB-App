@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "iswib-app": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/iswib-app/browser",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": ["zone.js"],
+            "tsConfig": "tsconfig.app.json",
+            "styles": ["src/styles.scss",
+            "node_modules/leaflet/dist/leaflet.css"],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "buildTarget": "iswib-app:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "iswib-app:build:production"
+            }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/iswib-app/server",
+            "tsConfig": "tsconfig.server.json",
+            "main": "src/main.server.ts"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "111a2d50-c649-4b9e-9753-dd8b406e2552"
+  }
+}

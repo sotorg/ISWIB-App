@@ -1,0 +1,79 @@
+/* Za celo telo i html */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Glavni kontejner */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #161139; // tamna pozadina ako koristiš
+}
+
+/* Header */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ako imaš više elemenata (npr. back dugme i logo) */
+  box-sizing: border-box;
+  background-image: url("../assets/images/header-bg.webp");
+  background-size: cover; // Dodato za cover efekat
+  background-position: center; // Dodato za centriranje
+  padding: 20px 20px;
+}
+
+.back-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.back-button img {
+  position: absolute;
+  width: 50px;
+  top: 30px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.logo-container a {
+  display: flex;
+}
+
+.logo {
+  height: 65px;
+}
+
+/* Sadržaj (gura dole footer i nav) */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+/* Bottom Nav (NAV uvek iznad footera) */
+.bottom-nav {
+  width: 100%;
+  background: #161139;
+  padding: 8px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4px; // mali razmak od footera
+}
+
+/* Footer */
+.footer {
+  background-color: #5566ca;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}

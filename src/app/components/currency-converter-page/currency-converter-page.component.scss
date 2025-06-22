@@ -1,0 +1,71 @@
+.converter-page {
+  background-color: #161139;
+  color: white;
+  padding: 2rem;
+  min-height: 100vh;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .back-button {
+    background: none;
+    border: none;
+    color: #f0c420;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    display: inline-block;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #e5b900;
+      text-decoration: underline;
+    }
+  }
+
+  .converter-box {
+    background-color: #2a245c;
+    padding: 2rem;
+    border-radius: 10px;
+    display: inline-block;
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 2rem;
+      background-color: #f0c420;
+      border: none;
+      color: #161139;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #e5b900;
+      }
+    }
+
+    .result {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+  }
+}
