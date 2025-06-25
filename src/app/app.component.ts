@@ -4,8 +4,6 @@ import { RouterModule, Router, NavigationEnd } from '@angular/router';
 import { Subject } from 'rxjs'; // Dodato
 import { filter, takeUntil } from 'rxjs/operators'; // Dodato takeUntil
 
-import { MainPageComponent } from './components/main-page/main-page.component';
-import { MapComponent } from './components/map/map.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 
 // Funkcija koju želimo da pozivamo pri promeni rute
@@ -28,8 +26,6 @@ function manageHomepageElements() {
   standalone: true,
   imports: [
     RouterModule,
-    MainPageComponent,
-    MapComponent,
     BottomNavComponent
   ],
   templateUrl: './app.component.html',

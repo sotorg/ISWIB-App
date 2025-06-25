@@ -1,9 +1,10 @@
 <nav class="bottom-nav hide-at-index">
-  <div class="nav-scroll-wrapper">
-    <ul class="nav-scroll-content">
-      <li *ngFor="let item of navItems" (click)="navigate(item.route)">
-        <img [src]="item.icon" alt="icon" class="nav-icon" />
-      </li>
-    </ul>
+  <div class="bottom-nav-inner"> <div class="nav-scroll-wrapper">
+      <ul class="nav-scroll-content">
+        <li *ngFor="let item of navItems" (click)="navigate(item.route)">
+          <img [src]="item.icon" alt="icon" class="nav-icon" />
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

@@ -1,15 +1,35 @@
 <div class="tictactoe-game">
   <h1>Tic Tac Toe</h1>
-  <div class="status-message">{{ status }}</div>
-  <button (click)="newGame()" class="restart-button">New game!</button>
+  <button (click)="newGame()" class="restart-button">New Game!</button>
 
-  <div class="board">
+  <div class="board" [ngClass]="{'board-animate': triggerBoardAnimation}" #gameBoard>
     <button
       *ngFor="let square of squares; let i = index"
       class="square"
+      [class.winning-square]="isWinningSquare(i)"
       (click)="makeMove(i)"
       [disabled]="square !== null || !!winner">
       <img *ngIf="getImageForPlayer(square)" [src]="getImageForPlayer(square)!" [alt]="square || ''">
     </button>
+
+    <div *ngFor="let emoji of drawEmojis"
+         class="individual-draw-emoji"
+         [style.top]="emoji.top"
+         [style.left]="emoji.left"
+         [style.animationDelay]="emoji.animationDelay"
+         [style.fontSize]="emoji.fontSize">
+      {{ emoji.emoji }}
+    </div>
+
+    <div *ngFor="let emoji of winEmojis"
+         class="individual-win-emoji"
+         [style.top]="emoji.top"
+         [style.left]="emoji.left"
+         [style.animationDelay]="emoji.animationDelay"
+         [style.fontSize]="emoji.fontSize">
+      {{ emoji.emoji }}
+    </div>
   </div>
+
+  <div class="status-message" [ngClass]="{'game-over': winner, 'draw-message': winner === 'Draw', 'winner-message': winner && winner !== 'Draw' }">{{ status }}</div>
 </div>
