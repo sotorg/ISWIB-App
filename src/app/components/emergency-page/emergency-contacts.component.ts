@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { BottomNavComponent } from '../bottom-nav/bottom-nav.component';
 >>>>>>> 94663fc (Initial commit)
+=======
+import { BottomNavComponent } from '../bottom-nav/bottom-nav.component';
+>>>>>>> 03bbe79 (tami - modifikacije)
 
 @Component({
   selector: 'app-emergency-contacts',
   standalone: true,
+<<<<<<< HEAD
 <<<<<<< HEAD
   imports: [CommonModule],
   templateUrl: './emergency-contacts.component.html',
@@ -19,6 +24,12 @@ export class EmergencyContactsComponent {}
   templateUrl: './emergency-contacts.component.html',
   styleUrls: ['./emergency-contacts.component.scss']
 })
+=======
+  imports: [CommonModule, BottomNavComponent],
+  templateUrl: './emergency-contacts.component.html',
+  styleUrls: ['./emergency-contacts.component.scss']
+})
+>>>>>>> 03bbe79 (tami - modifikacije)
 export class EmergencyContactsComponent {
   groupGuides = [
     { name: 'Tami', phone: '123-456-7890' },
@@ -35,4 +46,7 @@ export class EmergencyContactsComponent {
     { name: 'Ivana', phone: '901-234-5678', position: 'Media & PR 📸' }
   ];
 }
+<<<<<<< HEAD
 >>>>>>> 94663fc (Initial commit)
+=======
+>>>>>>> 03bbe79 (tami - modifikacije)
