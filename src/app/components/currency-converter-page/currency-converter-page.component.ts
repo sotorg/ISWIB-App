@@ -1,32 +1,17 @@
-<<<<<<< HEAD
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-=======
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgSelectModule } from '@ng-select/ng-select';
->>>>>>> 94663fc (Initial commit)
 
 @Component({
   selector: 'app-currency-converter-page',
   standalone: true,
-<<<<<<< HEAD
-  imports: [CommonModule, FormsModule],
-  templateUrl: './currency-converter-page.component.html',
-  styleUrls: ['./currency-converter-page.component.scss']
-})
-export class CurrencyConverterPageComponent {
-=======
   imports: [CommonModule, FormsModule, NgSelectModule],
   templateUrl: './currency-converter-page.component.html',
   styleUrls: ['./currency-converter-page.component.scss']
 })
 export class CurrencyConverterPageComponent implements OnInit {
->>>>>>> 94663fc (Initial commit)
   amount: number = 0;
   selectedCurrency: string = 'EUR';
   result: number | null = null;
@@ -44,11 +29,6 @@ export class CurrencyConverterPageComponent implements OnInit {
     NOK: 10.1,
     DKK: 15.7,
     JPY: 0.72,
-<<<<<<< HEAD
-  };
-
-  convertToRSD() {
-=======
     ALL: 1.15,
     AMD: 0.28,
     AZN: 64.5,
@@ -130,16 +110,11 @@ export class CurrencyConverterPageComponent implements OnInit {
   }
 
   convertToRSD(): void {
->>>>>>> 94663fc (Initial commit)
     const rate = this.exchangeRates[this.selectedCurrency];
     this.result = this.amount * rate;
   }
 
-<<<<<<< HEAD
-  goBack() {
-=======
   goBack(): void {
->>>>>>> 94663fc (Initial commit)
     this.router.navigate(['/more']);
   }
 }

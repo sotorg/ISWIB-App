@@ -7,26 +7,7 @@
 
   h1 {
     margin-bottom: 2rem;
-<<<<<<< HEAD
-  }
-
-  .back-button {
-    background: none;
-    border: none;
     color: #f0c420;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    display: inline-block;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #e5b900;
-      text-decoration: underline;
-    }
-=======
-    color: #f0c420;
->>>>>>> 94663fc (Initial commit)
   }
 
   .converter-box {
@@ -34,39 +15,25 @@
     padding: 2rem;
     border-radius: 10px;
     display: inline-block;
-<<<<<<< HEAD
-=======
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
     overflow: hidden;
->>>>>>> 94663fc (Initial commit)
 
     label {
       display: block;
       margin-top: 1rem;
       font-weight: bold;
-<<<<<<< HEAD
-    }
-
-    input,
-    select {
-=======
       text-align: left;
     }
 
     input {
->>>>>>> 94663fc (Initial commit)
       width: 100%;
       padding: 0.5rem;
       margin-top: 0.3rem;
       border-radius: 5px;
       border: none;
       font-size: 1rem;
-<<<<<<< HEAD
-    }
-
-=======
       box-sizing: border-box;
     }
 
@@ -97,7 +64,6 @@
 }
 
 
->>>>>>> 94663fc (Initial commit)
     button {
       margin-top: 1.5rem;
       padding: 0.6rem 2rem;
@@ -107,10 +73,7 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
-<<<<<<< HEAD
-=======
       width: 100%;
->>>>>>> 94663fc (Initial commit)
 
       &:hover {
         background-color: #e5b900;
@@ -124,8 +87,6 @@
     }
   }
 }
-<<<<<<< HEAD
-=======
 
 @media (max-width: 480px) {
   .converter-page {
@@ -144,4 +105,3 @@
     }
   }
 }
->>>>>>> 94663fc (Initial commit)
