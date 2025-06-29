@@ -2,18 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;  /* Prilagodite visinu u odnosu na header i footer */
   flex-direction: column;
   background-color: #161139;
-  padding: 20px;
+  justify-self: center;
 }
 
 .circle-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 kolone */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
-  max-width: 1200px; /* Opcionalno, da se ograniči širina */
+  max-width: 1200px;
 }
 
 .circle {
@@ -30,6 +29,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .circle-image {
@@ -43,10 +43,21 @@
 }
 
 .circle:hover .circle-image {
-  transform: scale(1.1); /* Povećanje slike pri hoveru */
+  transform: scale(1.1);
 }
 
 .circle p {
   font-size: 1rem;
   color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .circle-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .circle-content p {
+    font-size: 0.75rem;
+  }
 }
