@@ -3,15 +3,7 @@ import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angula
 import { CommonModule } from '@angular/common';
 
 // Defining players and image paths
-<<<<<<< HEAD
-<<<<<<< HEAD
 const PLAYER_SWIBI = 'swibi';
-=======
-const PLAYER_SWIBI = 'SWIBI';
->>>>>>> 94663fc (Initial commit)
-=======
-const PLAYER_SWIBI = 'SWIBI';
->>>>>>> 03bbe79 (tami - modifikacije)
 const PLAYER_ISWIB = 'ISWiB';
 const IMAGE_SWIBI_PATH = './assets/images/swibi.png';
 const IMAGE_ISWIB_PATH = './assets/images/iswib.png';
