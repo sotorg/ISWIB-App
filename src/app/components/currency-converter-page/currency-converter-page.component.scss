@@ -7,22 +7,7 @@
 
   h1 {
     margin-bottom: 2rem;
-  }
-
-  .back-button {
-    background: none;
-    border: none;
     color: #f0c420;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
-    display: inline-block;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #e5b900;
-      text-decoration: underline;
-    }
   }
 
   .converter-box {
@@ -30,22 +15,54 @@
     padding: 2rem;
     border-radius: 10px;
     display: inline-block;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
 
     label {
       display: block;
       margin-top: 1rem;
       font-weight: bold;
+      text-align: left;
     }
 
-    input,
-    select {
+    input {
       width: 100%;
       padding: 0.5rem;
       margin-top: 0.3rem;
       border-radius: 5px;
       border: none;
       font-size: 1rem;
+      box-sizing: border-box;
     }
+
+    ng-select {
+  .ng-dropdown-panel {
+    background-color: #ffffff; // bela pozadina (možeš i npr. #2a245c)
+    color: #161139; // boja teksta
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+  }
+
+  .ng-option {
+    padding: 10px 12px;
+    color: #161139;
+    font-weight: 500;
+
+    &.ng-option-selected {
+      background-color: #f0c420;
+      color: #161139;
+    }
+
+    &.ng-option-marked {
+      background-color: #f5e79e;
+      color: #000;
+    }
+  }
+}
+
 
     button {
       margin-top: 1.5rem;
@@ -56,6 +73,7 @@
       font-weight: bold;
       border-radius: 5px;
       cursor: pointer;
+      width: 100%;
 
       &:hover {
         background-color: #e5b900;
@@ -66,6 +84,24 @@
       margin-top: 1.5rem;
       font-size: 1.2rem;
       color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .converter-page {
+    padding: 1rem;
+
+    .converter-box {
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    .result {
+      font-size: 1.1rem;
     }
   }
 }
