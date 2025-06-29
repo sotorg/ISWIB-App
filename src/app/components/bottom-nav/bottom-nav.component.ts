@@ -92,8 +92,10 @@ export class BottomNavComponent implements OnInit, AfterViewInit, OnDestroy {
       this.currentBottomOffset = this.initialBottomOffset;
     }
   }
-
+  
   navigate(route: string) {
-    this.router.navigate([route]);
-  }
+  this.router.navigate([route]).then(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 }
