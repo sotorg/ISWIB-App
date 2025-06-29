@@ -21,6 +21,10 @@
     "@angular/platform-server": "^19.2.7",
     "@angular/router": "^19.2.7",
     "@angular/ssr": "^19.2.8",
+<<<<<<< HEAD
+=======
+    "@ng-select/ng-select": "^14.0.0",
+>>>>>>> 94663fc (Initial commit)
     "canvas-confetti": "^1.9.3",
     "express": "^4.18.2",
     "firebase": "^11.9.1",

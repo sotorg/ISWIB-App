@@ -8,6 +8,7 @@
   position: relative; /* Added relative positioning for absolutely positioned elements within the game */
   // overflow: hidden; /* Removed overflow from here, moved to .board */
 
+<<<<<<< HEAD
   .status-message {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -16,6 +17,18 @@
     min-height: 1.5em; // Prevents layout shift when text changes
     transition: font-size 0.3s ease, color 0.3s ease; // Smooth transition for changes
   }
+=======
+ .status-message {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-shadow: 1px 1px #000;
+  color: #f2bb51;
+}
+
+>>>>>>> 94663fc (Initial commit)
 
   // Styles for game over (win or draw)
   .status-message.game-over {
@@ -35,6 +48,7 @@
     /* Green color for winner */
   }
 
+<<<<<<< HEAD
   .restart-button {
     margin-bottom: 20px;
     padding: 10px 20px;
@@ -56,6 +70,31 @@
     }
   }
 
+=======
+.restart-button {
+  margin-bottom: 20px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f2bb51, #e3a631);
+  color: #161139;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #ffd26a, #f2bb51);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+>>>>>>> 94663fc (Initial commit)
   .board {
     display: grid;
     grid-template-columns: repeat(3, 80px); // Field size
@@ -63,7 +102,11 @@
     gap: 5px;
     border: 2px solid #333;
     padding: 5px;
+<<<<<<< HEAD
     background-color: #f0f0f0;
+=======
+    background: linear-gradient(135deg, #2a245c, #161139);
+>>>>>>> 94663fc (Initial commit)
     position: relative; // Important for absolute positioning of emojis
     border-radius: 20px;
     // overflow: hidden; /* Removed */
@@ -88,6 +131,7 @@
   }
 
   .square {
+<<<<<<< HEAD
     width: 80px;
     height: 80px;
     background-color: #fff;
@@ -114,6 +158,40 @@
     }
   }
 
+=======
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover:not(:disabled) {
+    background-color: #e9e9e9;
+  }
+
+  &:active {
+    transform: scale(0.95); // ✅ Ovde ubacuješ
+  }
+
+  img {
+  max-width: 70px;
+  max-height: 70px;
+  filter: drop-shadow(0 0 5px #f2bb51);
+}
+
+
+  &.winning-square {
+    background-color: #d4edda;
+    border-color: #28a745;
+  }
+}
+
+
+>>>>>>> 94663fc (Initial commit)
   /* Specific corner rounding for desired squares */
   .square:nth-child(1) {
     border-top-left-radius: 20px;

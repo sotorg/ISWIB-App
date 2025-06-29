@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Emergency Contacts</h1>
 <div class="contacts-container">
   <div class="contact-box" title="Police">
@@ -96,3 +97,59 @@
     <div class="position">IT TEAM MEMBER!srce</div>
   </div>
 </div>
+=======
+<main class="emergency-contacts-page">
+  <!-- Naslov -->
+  <h1 class="section-title">Emergency Contacts</h1>
+
+  <!-- Hitne službe -->
+  <div class="emergency-cards">
+    <div class="emergency-card">
+      <div class="emoji">🚓</div>
+      <div class="number">192</div>
+      <div class="label">Police</div>
+    </div>
+    <div class="emergency-card">
+      <div class="emoji">🚒</div>
+      <div class="number">193</div>
+      <div class="label">Firefighters</div>
+    </div>
+    <div class="emergency-card">
+      <div class="emoji">🚑</div>
+      <div class="number">194</div>
+      <div class="label">Ambulance</div>
+    </div>
+  </div>
+
+  <!-- Poruka primera -->
+  <h2 class="section-subtitle">Emergency Call Example</h2>
+  <div class="message">
+    <p>
+      Hello, my name is <strong>[Your Name]</strong>. I need help with an emergency.
+      <em>[Briefly explain the situation and tell location]</em>. Please send assistance immediately. Thank you.
+    </p>
+  </div>
+
+  <!-- Grupa vodiča -->
+  <h2 class="section-subtitle">Group Guides</h2>
+  <div class="contact-grid">
+    <div class="contact-box" *ngFor="let guide of groupGuides">
+      <div class="name">{{ guide.name }}</div>
+      <div class="phone-number"><a href="tel:{{ guide.phone }}">{{ guide.phone }}</a></div>
+    </div>
+  </div>
+
+  <!-- Organizacija -->
+  <h2 class="section-subtitle">Organization Team</h2>
+  <div class="contact-grid">
+    <div class="contact-box" *ngFor="let member of organizationTeam">
+      <div class="name">{{ member.name }}</div>
+      <div class="phone-number"><a href="tel:{{ member.phone }}">{{ member.phone }}</a></div>
+      <div class="position" *ngIf="member.position">{{ member.position }}</div>
+    </div>
+  </div>
+</main>
+
+<!-- Navigacija na dnu -->
+<app-bottom-nav></app-bottom-nav>
+>>>>>>> 94663fc (Initial commit)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .section-title {
   text-align: center;
   margin-top: 40px; /* Add some space above the titles */
@@ -187,5 +188,131 @@ nav a:hover {
 
   .contacts-container {
     padding: 0; /* Remove extra padding on mobile */
+=======
+$primary-color: #f2bb51;
+$background-color: #161139;
+$card-bg: #2a245c;
+$font-color: #fff;
+$danger-color: #dc0437;
+
+:host {
+  display: block;
+  padding: 20px;
+  background-color: $background-color;
+  color: $font-color;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.emergency-page {
+  padding-bottom: 160px;
+
+  @media (max-width: 768px) {
+    padding-bottom: 200px;
+  }
+}
+
+h1, h2 {
+  color: $primary-color;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: $primary-color;
+  font-size: 1.3rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.emergency-cards,
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.emergency-cards > .emergency-card:nth-last-child(1):nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.emergency-card,
+.contact-box {
+  background-color: $card-bg;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.emoji {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.number {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $danger-color;
+}
+
+.label {
+  font-size: 1rem;
+  color: $font-color;
+  opacity: 0.9;
+}
+
+.name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.phone-number {
+  font-size: 1.1rem;
+  color: $danger-color;
+
+  a {
+    color: $danger-color;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.message {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: $card-bg;
+  padding: 18px 24px;
+  border-radius: 12px;
+  line-height: 1.5;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: $font-color;
+
+  strong {
+    color: $primary-color;
+  }
+
+  em {
+    color: #ccc;
+    font-style: italic;
+>>>>>>> 94663fc (Initial commit)
   }
 }

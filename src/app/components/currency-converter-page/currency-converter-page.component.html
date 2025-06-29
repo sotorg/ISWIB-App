@@ -2,6 +2,7 @@
   <h1>Currency Converter to RSD</h1>
 
   <div class="converter-box">
+<<<<<<< HEAD
     <label for="amount">Amount:</label>
     <input type="number" [(ngModel)]="amount" placeholder="Enter amount" />
 
@@ -11,13 +12,43 @@
         {{ key.key }}
       </option>
     </select>
+=======
+    <label for="amount">Amount in selected currency:</label>
+    <input
+      type="number"
+      [(ngModel)]="amount"
+      placeholder="Enter amount"
+      id="amount"
+    />
+
+    <label for="currency">Currency:</label>
+    <ng-select
+  [items]="currencyOptions"
+  bindLabel="label"
+  bindValue="code"
+  [(ngModel)]="selectedCurrency"
+  [placeholder]="!selectedCurrency ? 'Select currency' : ''"
+  [searchable]="true"
+  appendTo="body"
+  class="custom-ng-select">
+</ng-select>
+
+
+>>>>>>> 94663fc (Initial commit)
 
     <button (click)="convertToRSD()">Convert</button>
 
     <div class="result" *ngIf="result !== null">
+<<<<<<< HEAD
       {{ amount }} {{ selectedCurrency }} = {{ result | number:'1.2-2' }} RSD
     </div>
   </div>
 </main>
 
   
+=======
+      {{ amount }} {{ selectedCurrency }} = {{ result | number: '1.2-2' }} RSD
+    </div>
+  </div>
+</main>
+>>>>>>> 94663fc (Initial commit)
