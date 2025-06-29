@@ -10,24 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class FaqPageComponent {
   faqs = [
-<<<<<<< HEAD
-    {
-      question: 'What is ISWiB?',
-      answer: 'ISWiB is the International Student Week in Belgrade.',
-      open: false
-    },
-    {
-      question: 'Who can apply?',
-      answer: 'Students from all over the world aged 18–30.',
-      open: false
-    },
-    {
-      question: 'How much does it cost?',
-      answer: '...',
-      open: false
-    }
-  ];
-=======
   {
     question: 'What should I do if I lose my passport?',
     answer: 'Immediately contact the nearest police station and your country’s embassy in Belgrade.',
@@ -54,8 +36,8 @@ export class FaqPageComponent {
     open: false
   },
   {
-    question: 'Where can I buy a SIM card?',
-    answer: 'SIM cards are available at mobile carrier stores (mts, Yettel, A1) and kiosks around the city.',
+    question: 'How can i have internet in Serbia?',
+    answer: 'ISWiB provides you with internet on every ISWiB related event, including workshops, parties and activities. Outside of that the only option you have is eSIM(if your phone accepts it). eSIM can be bought at the airport, or any provider store(A1, Yettel, MTS). Regular SIM cards are locked only to Serbian citizenship',
     open: false
   },
   {
@@ -80,7 +62,6 @@ export class FaqPageComponent {
   }
 ];
 
->>>>>>> 94663fc (Initial commit)
 
   toggleFaq(index: number) {
     this.faqs[index].open = !this.faqs[index].open;
